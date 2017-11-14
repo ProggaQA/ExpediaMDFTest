@@ -8,6 +8,7 @@ import value.ExpediaBookingValues;
 
 
 public class ExpediaBookingTC extends Config {
+	
 	ExpediaBookingLocators ExpLoc = new ExpediaBookingLocators();
 	ExpediaBookingValues   ExpLocVal = new ExpediaBookingValues ();
 
@@ -23,33 +24,29 @@ public class ExpediaBookingTC extends Config {
 	//for Destination textBox 
 	typeByXpath (ExpLoc.DestiLoc , ExpLocVal.DestiLocValue);
 					
-	//for clicking Departing date 
-	clickByXpath (ExpLoc.DepDateLoc);					
-	
-	//for clicking Returning date 
-	clickByXpath (ExpLoc.RetDateLoc);
 	
 	//for clicking departing date from calender
-	clickByXpath (ExpLoc.DepDateFrmCalLoc) ;
+	typeByXpath (ExpLoc.DepDateLoc, ExpLocVal.DepDateValue) ;
 					
 	//for clicking returning date from calender
-	clickByXpath (ExpLoc.RetDateFrmCalLoc);
+	typeByXpath (ExpLoc.RetDateLoc,ExpLocVal.RetDateValue);
 	
 	//for clicking room
-	clickByXpath (ExpLoc.Room);
+	dropdownByXpath(ExpLoc.RoomNum,ExpLocVal.RoomValue);
 	
 	//for clicking adult number
-	clickByXpath(ExpLoc.AdultNum);
+	dropdownById(ExpLoc.AdultNum,ExpLocVal.AdultValue);
 	
 	//for clicking children number
-	clickByXpath(ExpLoc.ChildNum);
+	dropdownByXpath(ExpLoc.ChildNum,ExpLocVal.ChildValue);
 	
 	//for clicking preferred class
-	clickByXpath(ExpLoc.PrefCls);
+	dropdownById(ExpLoc.PrefCls,ExpLocVal.PrefClsValue);
 	
 	//for clicking search button
 	clickByXpath(ExpLoc.SrchBut);
 }
+
 
 
 }

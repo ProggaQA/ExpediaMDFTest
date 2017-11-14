@@ -3,6 +3,8 @@ package util;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class WdFunction {
 	public static WebDriver driver;
@@ -21,45 +23,54 @@ public class WdFunction {
 		}
 	}
 
-	public void typeById (String locators, String values){
-		try{
-		driver.findElement(By.id(locators)).clear();
-		driver.findElement (By.id(locators)).sendKeys (values);
-		}
-		catch(Exception e){
-			Framework_Logs.debug("ERROR :" + e.getMessage());
-			Framework_Logs.debug("ERROR :" + e.getMessage());
-		}
-
-	}
-	
 	public void typeByName (String locators, String values){
-		try{
 		driver.findElement(By.name(locators)).clear();
 		driver.findElement (By.name(locators)).sendKeys (values);
-		}
-		catch(Exception e){
-			Framework_Logs.debug("ERROR :" + e.getMessage());
-			Framework_Logs.debug("ERROR :" + e.getMessage());
-		}
+
+	}
+	public void typeById (String locators, String values){
+		driver.findElement(By.id(locators)).clear();
+		driver.findElement (By.id(locators)).sendKeys (values);
 
 	}
 	
-
 	public void clickByXpath (String locators){
-		try{
 		driver.findElement (By.xpath(locators)).click();
-		}
-		catch(Exception e){
-			Framework_Logs.debug("ERROR :" + e.getMessage());
-			Framework_Logs.debug("ERROR :" + e.getMessage());
-		}
 
 	}
+	
+		
+	public void dropdownByXpath(String locators, String values){
+		
+		WebElement dd = driver.findElement(By.xpath(locators));
+		Select ddSelect = new Select(dd);
+		ddSelectByIndex(ddSelect);
+	}
+	
+	public void dropdownById(String locators, String values){
+		
+		WebElement dd = driver.findElement(By.xpath(locators));
+		Select ddSelect = new Select(dd);
+		ddSelectByVisibleText(ddSelect, values);	
+	}
+
+		
+	public  void ddSelectByIndex(Select sValue){
+		sValue.selectByIndex(0);
+
+	}
+	
+	
+	public void ddSelectByVisibleText(Select sValue, String values){
+		sValue.selectByValue("0");
+    }
+
+
 	
 	public void maxPage (){
 		
 		driver.manage().window().maximize();
-		}
+		
+	}
 
 }

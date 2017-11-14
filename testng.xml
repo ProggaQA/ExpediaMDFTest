@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ExpediaHomePage">
-  <test name="Test">
+<suite name="ExpS1" parallel="tests">
+  
+  <test name=" ============Expedia Booking testing using ChrsomeTest==================">
+  	<parameter name="url" value="https://www.expedia.com"> </parameter>
+  	<parameter name="browser" value="chrome"> </parameter>
+  	<classes>
+      <class name="testCases.ExpediaBookingTC"/>
+    </classes>
   </test> <!-- Test -->
-</suite> <!-- ExpediaHomePage -->
+  
+  <test name=" ============Expedia Booking testing using FirefoxTest===============">
+  	<parameter name="url" value="https://www.expedia.com"> </parameter>
+  	<parameter name="browser" value="firefox"> </parameter>
+  	<classes>
+      <class name="testCases.ExpediaBookingTC"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
