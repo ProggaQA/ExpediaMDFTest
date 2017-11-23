@@ -1,6 +1,8 @@
 package value;
 
-public class ExpediaBookingValues {
+import base.Config;
+
+public class ExpediaBookingValues extends Config {
 	
 	//for origin value
 	public String OriginLocValue = "New York,NY";

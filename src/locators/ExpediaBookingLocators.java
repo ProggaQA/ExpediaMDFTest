@@ -5,19 +5,28 @@ import org.openqa.selenium.By;
 
 
 public class ExpediaBookingLocators {
-	
-	        //for Origin
-			public String OriginLoc= "//input[@id='package-origin-hp-package']";
+	    
+	        //for navigating to Flights
+	        public String FlightMod = "//*[@id='tab-flight-tab-hp']";
+	        
+	        //for navigating to roung-trip
+	        public String RoundTrip = "//*[@id='flight-type-roundtrip-label-hp-flight']";
+	     
+	        //for Flying from 
+			public String OriginLoc= "//input[@id='flight-origin-hp-flight']";
 			
-			//for Destination
-			public String DestiLoc = "//input[@id='package-destination-hp-package']";
+			//for Flying-to
+			public String DestiLoc = "//input[@id='flight-destination-hp-flight']";
 			
-			//for Departing date
-			public String DepDateLoc = "//*[@id='package-departing-hp-package']";
+			//for clicking calender 
+			public String Calender = "//*[@id='package-departing-wrapper-hp-package']/label/span[2]/span";
+			
+			//for Departing date  pick from calender
+			public String DepDLoc = "//input[@id='flight-departing-hp-flight']";
 			
 			
 			//for Returning date 
-			public String RetDateLoc = "//*[@id='package-returning-hp-package']";
+			public String RetDateLoc = "//input[@id='package-returning-hp-package']";
 			
 			//For departing date from calender
 			//public String DepDateFrmCalLoc = "//div[@id='flight-departing-wrapper-hp-flight']/div/div/div[3]";
@@ -26,28 +35,14 @@ public class ExpediaBookingLocators {
 			//For random selection of returning date in Flight section
 			//public String RetDateFrmCalLoc = "//div[@id='flight-returning-wrapper-hp-flight']/div/div/div[3]";
 			
-			//for selecting room using dropdown
-			public String RoomNum = "//select[@id='package-rooms-hp-package']";
-			////*[@id="package-rooms-hp-package"]
-			
 			//for adult number using dropdown
-			public String AdultNum = "//select[@id='package-1-adults-hp-package']";
+			public String AdultNum = "//select[@id='flight-adults-hp-flight']";
 			
 			//for child number using dropdown
-			public String ChildNum = "//select[@id='package-1-children-hp-package']";
-			
-			//for prefered class
-			public String PrefCls = "//select[@id='package-advanced-preferred-class-hp-package']";
-			
-			//for search button
-			public String SrchBut = "//button=[@id='search-button-hp-package']";
+			public String ChildNum = "//select[@id='flight-children-hp-flight']";
 			
 			
-						
-						
-			
-			
-			//For Search Button
-			public String expSearchBtnLocator = "//button[@class= 'btn-primary btn-action gcw-submit']";
+			//for Search Button
+			public String SearchBut = "//button[@class= 'btn-primary btn-action gcw-submit']";
 			
 }

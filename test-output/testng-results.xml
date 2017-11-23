@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="ExpS1" duration-ms="39611" started-at="2017-11-13T18:32:25Z" finished-at="2017-11-13T18:33:05Z">
+  <suite name="ExpS1" duration-ms="38109" started-at="2017-11-23T06:07:50Z" finished-at="2017-11-23T06:08:29Z">
     <groups>
     </groups>
-    <test name=" ============Expedia Booking testing using FirefoxTest===============" duration-ms="5353" started-at="2017-11-13T18:32:25Z" finished-at="2017-11-13T18:32:30Z">
+    <test name=" ============Expedia Booking testing using FirefoxTest===============" duration-ms="5654" started-at="2017-11-23T06:07:50Z" finished-at="2017-11-23T06:07:56Z">
       <class name="testCases.ExpediaBookingTC">
-        <test-method status="FAIL" signature="browserInitialize(java.lang.String, java.lang.String)[pri:0, instance:testCases.ExpediaBookingTC@2b552920]" name="browserInitialize" is-config="true" duration-ms="0" started-at="2017-11-13T13:32:25Z" finished-at="2017-11-13T13:32:25Z">
+        <test-method status="FAIL" signature="browserInitialize(java.lang.String, java.lang.String)[pri:0, instance:testCases.ExpediaBookingTC@2b552920]" name="browserInitialize" is-config="true" duration-ms="0" started-at="2017-11-23T01:07:50Z" finished-at="2017-11-23T01:07:50Z">
           <params>
             <param index="0">
               <value>
@@ -95,19 +95,19 @@ Caused by: java.lang.ClassNotFoundException: org.w3c.dom.ElementTraversal
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialize -->
-        <test-method status="SKIP" signature="SearchForFlightsTC()[pri:0, instance:testCases.ExpediaBookingTC@2b552920]" name="SearchForFlightsTC" duration-ms="6" started-at="2017-11-13T13:32:30Z" finished-at="2017-11-13T13:32:30Z">
+        <test-method status="SKIP" signature="SearchForFlightsTC()[pri:0, instance:testCases.ExpediaBookingTC@2b552920]" name="SearchForFlightsTC" duration-ms="12" started-at="2017-11-23T01:07:56Z" finished-at="2017-11-23T01:07:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchForFlightsTC -->
-        <test-method status="SKIP" signature="afterTest()[pri:0, instance:testCases.ExpediaBookingTC@2b552920]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-11-13T13:32:30Z" finished-at="2017-11-13T13:32:30Z">
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:testCases.ExpediaBookingTC@2b552920]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-11-23T01:07:56Z" finished-at="2017-11-23T01:07:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- testCases.ExpediaBookingTC -->
     </test> <!--  ============Expedia Booking testing using FirefoxTest=============== -->
-    <test name=" ============Expedia Booking testing using ChrsomeTest==================" duration-ms="39611" started-at="2017-11-13T18:32:25Z" finished-at="2017-11-13T18:33:05Z">
+    <test name=" ============Expedia Booking testing using ChrsomeTest==================" duration-ms="38109" started-at="2017-11-23T06:07:50Z" finished-at="2017-11-23T06:08:29Z">
       <class name="testCases.ExpediaBookingTC">
-        <test-method status="PASS" signature="browserInitialize(java.lang.String, java.lang.String)[pri:0, instance:testCases.ExpediaBookingTC@4b4523f8]" name="browserInitialize" is-config="true" duration-ms="23597" started-at="2017-11-13T13:32:25Z" finished-at="2017-11-13T13:32:49Z">
+        <test-method status="PASS" signature="browserInitialize(java.lang.String, java.lang.String)[pri:0, instance:testCases.ExpediaBookingTC@4b4523f8]" name="browserInitialize" is-config="true" duration-ms="24255" started-at="2017-11-23T01:07:50Z" finished-at="2017-11-23T01:08:15Z">
           <params>
             <param index="0">
               <value>
@@ -123,7 +123,7 @@ Caused by: java.lang.ClassNotFoundException: org.w3c.dom.ElementTraversal
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialize -->
-        <test-method status="FAIL" signature="SearchForFlightsTC()[pri:0, instance:testCases.ExpediaBookingTC@4b4523f8]" name="SearchForFlightsTC" duration-ms="15962" started-at="2017-11-13T13:32:49Z" finished-at="2017-11-13T13:33:05Z">
+        <test-method status="FAIL" signature="SearchForFlightsTC()[pri:0, instance:testCases.ExpediaBookingTC@4b4523f8]" name="SearchForFlightsTC" duration-ms="13791" started-at="2017-11-23T01:08:15Z" finished-at="2017-11-23T01:08:29Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Cannot locate option with value: 0
@@ -139,9 +139,9 @@ Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
 System info: host: 'PRAPTI', ip: '10.0.0.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
 Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:208)
-	at util.WdFunction.ddSelectByVisibleText(WdFunction.java:65)
-	at util.WdFunction.dropdownById(WdFunction.java:54)
-	at testCases.ExpediaBookingTC.SearchForFlightsTC(ExpediaBookingTC.java:38)
+	at util.WdFunction.ddSelectByVisibleText(WdFunction.java:94)
+	at util.WdFunction.dropdownById(WdFunction.java:83)
+	at testCases.ExpediaBookingTC.SearchForFlightsTC(ExpediaBookingTC.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -168,7 +168,7 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchForFlightsTC -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.ExpediaBookingTC@4b4523f8]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-11-13T13:33:05Z" finished-at="2017-11-13T13:33:05Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.ExpediaBookingTC@4b4523f8]" name="afterTest" is-config="true" duration-ms="4" started-at="2017-11-23T01:08:29Z" finished-at="2017-11-23T01:08:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

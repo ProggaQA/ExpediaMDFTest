@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ExpS1]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="url" value="https://www.expedia.com"/>
+  <test name=" ============Expedia Booking testing using FirefoxTest===============(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://www.expedia.com"/>
+    <classes>
+      <class name="testCases.ExpediaBookingTC">
+        <methods>
+          <include name="browserInitialize"/>
+          <include name="browserInitialize"/>
+          <include name="afterTest"/>
+          <include name="SearchForFlightsTC"/>
+        </methods>
+      </class> <!-- testCases.ExpediaBookingTC -->
+    </classes>
+  </test> <!--  ============Expedia Booking testing using FirefoxTest===============(failed) -->
+  <test name=" ============Expedia Booking testing using ChrsomeTest==================(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.expedia.com"/>
+    <classes>
+      <class name="testCases.ExpediaBookingTC">
+        <methods>
+          <include name="browserInitialize"/>
+          <include name="browserInitialize"/>
+          <include name="afterTest"/>
+          <include name="SearchForFlightsTC"/>
+        </methods>
+      </class> <!-- testCases.ExpediaBookingTC -->
+    </classes>
+  </test> <!--  ============Expedia Booking testing using ChrsomeTest==================(failed) -->
+</suite> <!-- Failed suite [ExpS1] -->

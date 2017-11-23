@@ -1,12 +1,16 @@
 package util;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class WdFunction {
+import base.Config;
+
+public class WdFunction{
 	public static WebDriver driver;
 	public static Logger Framework_Logs = Logger.getLogger("  ");
 	
@@ -32,6 +36,31 @@ public class WdFunction {
 		driver.findElement(By.id(locators)).clear();
 		driver.findElement (By.id(locators)).sendKeys (values);
 
+	}
+	public void clickBycssSelector(String locators) {
+    	driver.findElement(By.cssSelector(locators)).clear();
+	    driver.findElement(By.cssSelector(locators)).click();
+	}
+	
+	public String datepickerfromcal(String locators, String value){
+		driver.findElement(By.id(locators)).click();
+		
+		List<WebElement> allDates=driver.findElements(By.xpath("//table[@class='datepicker-dropdown']//td"));
+		
+		for(WebElement ele:allDates)
+		{
+			
+			String date=ele.getText();
+			
+			if(date.equalsIgnoreCase("29"))
+			{
+				ele.click();
+				//break;
+			}
+			
+		}
+		return value ;
+		
 	}
 	
 	public void clickByXpath (String locators){
